@@ -35,6 +35,7 @@ public class SecurityConfig  {
             auth.requestMatchers("/h2-console/**").permitAll();
             auth.requestMatchers("/api/users/createuser/**").permitAll();
             auth.requestMatchers("/api/users/createuser").permitAll();
+            auth.requestMatchers("/swagger-ui/**").permitAll();
             auth.requestMatchers("/error**").permitAll();
             auth.anyRequest().authenticated();
         });
